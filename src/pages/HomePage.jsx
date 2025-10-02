@@ -1,0 +1,31 @@
+import React from "react";
+import "../App.css"; // fixed path
+
+import Navbar from "../components/navBar.jsx";
+import Hero from "../components/Hero.jsx";
+import Des from "../components/des.jsx";
+import HowBuild from "../components/howBuild.jsx";
+import Project from "../components/project.jsx";
+import AboutMe from "../components/AboutMe.jsx";
+import Stack from "../components/Stack.jsx"; // ✅ added
+import Form from "../components/Form.jsx";
+import Footer from "../components/Footer";
+function HomePage() {
+  return (
+    <>
+      <div>
+        <Navbar />
+        <Hero />
+      </div>
+      <AboutMe />
+      <Des />
+      <HowBuild />
+      <Project />
+      <Stack />
+      <Form />
+      <Footer />
+    </>
+  );
+}
+
+export default HomePage;
