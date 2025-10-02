@@ -13,7 +13,7 @@ function Stack() {
     { name: "GSAP", img: "/stack/gsap.png" },
     { name: "Git", img: "/stack/git.png" },
     { name: "Github", img: "/stack/github.png" },
-    { name: "Java", img: "/stack/java.jpg" },
+    { name: "Java", img: "/stack/java.webp" },
   ];
  
   const items = [
@@ -129,11 +129,9 @@ function Stack() {
                 <img
                   src={skill.img}
                   alt={skill.name}
-                  className="w-16 h-16 sm:w-20 sm:h-20  object-contain rounded-full animate-wiggle "
+                  className="w-16 h-16 sm:w-20 sm:h-20   object-contain rounded-full animate-wiggle "
                 />
-                <p className="absolute  bottom-[-2rem] opacity-0  group-hover:opacity-100  group-hover:translate-y-2 transition-all duration-300 text-sm sm:text-base text-gray-700 bg-white px-2 py-1 rounded shadow-lg">
-                  {skill.description}
-                </p>
+             
               </div>
             ))}
           </div>
