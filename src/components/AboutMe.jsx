@@ -5,7 +5,7 @@ function AboutMe() {
     <section className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 px-6 md:px-32 py-20 w-full">
       <div className="flex justify-center md:justify-start w-full md:w-1/3">
         <img
-          src="/public/img/me.png"
+          src="/img/me.png"////
           alt="Profile"
           className="rounded-full w-40 h-40 md:w-60 md:h-60 object-cover shadow-lg border-2 border-gray-300"
         />
@@ -49,7 +49,7 @@ function AboutMe() {
 
         <div className="pt-4">
           <a
-            href="/public/img/Print Review.pdf"
+            href="/img/Print Review.pdf" ///////
             download="Resume.pdf"
             className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-medium px-6 py-2 rounded-md shadow-md transition transform hover:scale-105"
           >

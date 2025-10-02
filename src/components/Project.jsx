@@ -12,13 +12,13 @@ const projects = [
     id: 1,
     title: "Portfolio Website",
     tech: "React + Tailwind CSS",
-    image: "/public/img/project portfolio.png",
+    image: "/img/project portfolio.png",///
   },
   {
     id: 2,
     title: "AI Image Generator",
     tech: "MERN + ClipDrop API",
-    image: "/public/img/Your paragraph text (2).png",
+    image: "/img/Your paragraph text (2).png",////
   },
   {
     id: 3,

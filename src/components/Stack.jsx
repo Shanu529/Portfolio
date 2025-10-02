@@ -5,148 +5,17 @@ import "./Dock.css";
 function Stack() {
   const skills = [
     { name: "React", img: "/stack/react.png" },
-    { name: "Node.js", img: "/public/stack/nodejs.png" },
-    { name: "MongoDB", img: "/public/stack/mongo.png" },
-    { name: "Express.js", img: "/public/stack/expressjs.webp" },
-    { name: "JavaScript", img: "/public/stack/js.webp" },
-    { name: "Tailwind CSS", img: "/public/stack/tailwind.png" },
-    { name: "GSAP", img: "/public/stack/gsap.png" },
-    { name: "Git", img: "/public/stack/git.png" },
-    { name: "Github", img: "/public/stack/github.png" },
-    { name: "Java", img: "/public/stack/java.jpg" },
+    { name: "Node.js", img: "/stack/nodejs.png" },
+    { name: "MongoDB", img: "/stack/mongo.png" },
+    { name: "Express.js", img: "/stack/expressjs.webp" },
+    { name: "JavaScript", img: "/stack/js.webp" },
+    { name: "Tailwind CSS", img: "/stack/tailwind.png" },
+    { name: "GSAP", img: "/stack/gsap.png" },
+    { name: "Git", img: "/stack/git.png" },
+    { name: "Github", img: "/stack/github.png" },
+    { name: "Java", img: "/stack/java.jpg" },
   ];
-  // const items = [
-  //   {
-  //     icon: (
-  //       <img src="/stack/react.png" alt="React" className=" rounded-full " />
-  //     ),
-  //     label: "Home",
-  //     onClick: () => alert("Home!"),
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/nodejs.png"
-  //         alt="Node js "
-  //         className=" rounded-full "
-  //       />
-  //     ),
-  //     label: "node js ",
-  //     onClick: () => alert("Settings!"),
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/expressjs.webp"
-  //         alt="React"
-  //         className=" rounded-full "
-  //       />
-  //     ),
-  //     label: "Profile",
-  //     onClick: () => alert("Profile!"),
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/mongo.png"
-  //         alt="React"
-  //         className=" rounded-full"
-  //       />
-  //     ),
-  //     label: "Profile",
-  //     onClick: () => alert("Profile!"),
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/js.webp"
-  //         alt="React"
-  //         className=" rounded-full bg-transparent"
-  //       />
-  //     ),
-  //     label: "Profile",
-  //     onClick: () => alert("Profile!"),
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/tailwind.png"
-  //         alt="React"
-  //         className=" rounded-full "
-  //       />
-  //     ),
-  //     label: "Profile",
-  //     onClick: () => alert("Profile!"),
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/css3.png"
-  //         alt="React"
-  //         className=" rounded-full bg-white "
-  //       />
-  //     ),
-  //     label: "Profile",
-  //     onClick: () => alert("Profile!"),
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/html.jpg"
-  //         alt="React"
-  //         className=" rounded-full bg-white "
-  //       />
-  //     ),
-  //     label: "Profile",
-  //     onClick: () => alert("Profile!"),
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/java.jpg"
-  //         alt="React"
-  //         className=" rounded-full bg-white "
-  //       />
-  //     ),
-  //     label: "Profile",
-  //     onClick: () => alert("Profile!"),
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/gsap.png"
-  //         alt="React"
-  //         className=" rounded-full bg-white "
-  //       />
-  //     ),
-  //     label: "Profile",
-  //     onClick: () => alert("Profile!"),
-  //   },
-
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/git.png"
-  //         alt="React"
-  //         className=" rounded-full bg-white "
-  //       />
-  //     ),
-  //     label: "Profile",
-  //     onClick: () => alert("Profile!"),
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="/public/stack/github.png"
-  //         alt="React"
-  //         className=" rounded-full bg-white "
-  //       />
-  //     ),
-  //     label: "Profile",
-  //     onClick: () => alert("Profile!"),
-  //   },
-  // ];
-
+ 
   const items = [
     {
       icon: <img src="/stack/react.png" alt="React" className="rounded-full" />,
