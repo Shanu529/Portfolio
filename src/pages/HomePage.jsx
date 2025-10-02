@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css"; // fixed path
 
-import Navbar from "../components/navBar.jsx";
+import Navbar from "../components/NavBar.jsx";
 import Hero from "../components/Hero.jsx";
 import Des from "../components/des.jsx";
 import HowBuild from "../components/howBuild.jsx";
