@@ -1,49 +1,4 @@
-// import React from "react";
 
-// function Project() {
-//   return (
-//     <div className="min-h-screen bg-gray-900 text-white py-20 px-6 md:px-20">
-//       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-//         My Work Experiences
-//       </h2>
-
-//       {/* Projects Grid */}
-//       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-//         <div className="bg-gray-800 p-5 rounded-xl shadow-lg hover:scale-105 transition">
-//           <h3 className="text-xl font-bold">Portfolio Website</h3>
-//           <p className="text-sm mt-2">React + Tailwind CSS</p>
-//           <img
-//             src="/img/project1img.webp"
-//             alt="Portfolio Screenshot"
-//             className="rounded-lg mt-4"
-//           />
-//         </div>
-
-//         <div className="bg-white text-black p-5 rounded-xl shadow-lg hover:scale-105 transition">
-//           <h3 className="text-xl font-bold">AI Image Generator</h3>
-//           <p className="text-sm mt-2">MERN + ClipDrop API</p>
-//           <img
-//             src="/img/Screenshot 2025-09-11 214700.png"
-//             alt="AI Generator"
-//             className="rounded-lg mt-4"
-//           />
-//         </div>
-
-//         <div className="bg-gray-800 p-5 rounded-xl shadow-lg hover:scale-105 transition">
-//           <h3 className="text-xl font-bold">Spotify Clone</h3>
-//           <p className="text-sm mt-2">React (Frontend Only)</p>
-//           <img
-//             src="/img/spotifycover.png"
-//             alt="Spotify Clone"
-//             className="rounded-lg mt-4"
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Project;
 
 import React, { useState } from "react";
 
