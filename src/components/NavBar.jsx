@@ -3,7 +3,7 @@ import React from "react";
 function NavBar() {
   return (
     <div className="fixed top-0 left-0 w-full z-50 text-white p-5 flex justify-between px-4 sm:px-10 md:px-[10rem] items-center bg-black/30">
-      <h1 className="text-lg font-bold">Next In</h1>
+      <h1 className="text-lg font-bold">Portfolio</h1>
       <ul className="flex space-x-3 sm:space-x-6">
         <a
           href="https://github.com/Shanu529"

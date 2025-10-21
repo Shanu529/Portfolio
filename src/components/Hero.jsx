@@ -1,52 +1,4 @@
-// import React from "react";
 
-// function Hero() {
-//   return (
-//     <div className="bg-[url('/img/bg2.jpg')] h-screen bg-cover bg-center z-10">
-//       <div className="flex items-center flex-col justify-center h-full text-white text-4xl font-bold">
-//         <p className="p-2">Welcome to My Portfolio</p>
-//         <p className="p-2">hi i'm web developer</p>
-//         <p className="text-sm p-5 w-1/2 text-center font-thin">
-//           {/* write bio of yourself here */}
-//           I am a passionate web developer with experience in creating dynamic and responsive websites. I love coding and continuously learning new technologies to enhance my skills.
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Hero;
-
-// Hero.jsx
-
-// import React from "react";
-
-// function Hero() {
-//   return (
-//     <div className="relative h-screen bg-[url('/img/bg2.jpg')] bg-cover bg-center">
-//       {/* Overlay for readability */}
-//       <div className="absolute inset-0 bg-black/50 z-0"></div>
-
-//       {/* Hero Content */}
-//       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-0 text-white">
-//         <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-//           Welcome to My Portfolio
-//         </h1>
-//         <h2 className="text-2xl md:text-3xl mb-6 drop-shadow-md">
-//           Hi, I'm a Web Developer
-//         </h2>
-//         <p className="text-sm md:text-base max-w-xl font-light drop-shadow-sm mb-8">
-//           I am a passionate web developer with experience in creating dynamic and responsive websites. I love coding and continuously learning new technologies to enhance my skills.
-//         </p>
-//         <button className="px-6 py-3 rounded-full bg-cyan-500 text-white font-medium hover:bg-cyan-600 transition-colors duration-300">
-//           View My Work
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Hero;
 
 import React from "react";
 import { Link, Mail } from "lucide-react";
@@ -67,22 +19,22 @@ function Hero() {
       {/* Content */}
       <div className="relative  z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 md:px-0 max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-5 animate-fadeInUp delay-100 bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
-          Hello, I'm Shanu Chhetri
+          Hy, I'm Shanu Chhetri
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-gray-300 mb-8 animate-fadeInUp delay-300">
-          Web Developer & Problem Solver
+          Developer & Problem Solver
         </h2>
-        <p className="text-sm sm:text-base md:text-lg text-gray-400 font-light mb-12 animate-fadeInUp delay-500 max-w-lg px-2 sm:px-0">
-          I build dynamic, responsive websites and love turning ideas into
-          reality using modern web technologies like React, Node.js, and
-          Tailwind CSS.
+        <p className="text-sm sm:text-base md:text-lg text-gray-400 font-light mb-12 animate-fadeInUp delay-500 max-w-3xl px-2 sm:px-0">
+          I build dynamic and responsive websites, bringing ideas to life using
+          modern web technologies across the frontend, backend, and database —
+          including React, Node.js, and Tailwind CSS.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fadeInUp delay-700">
           <a
             href="https://github.com/Shanu529"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 rounded-full bg-cyan-600 text-black font-semibold shadow-md 
+            className="px-6 py-3 rounded-full bg-cyan-600 text-black font-semibold shadow-lg
              transform transition hover:bg-cyan-500 hover:scale-105 hover:rotate-2 
              focus:outline-none inline-block"
           >

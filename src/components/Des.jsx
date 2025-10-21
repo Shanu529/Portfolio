@@ -4,7 +4,7 @@ function Description() {
   return (
     <section className="bg-black text-white bg-cover bg-eight bg-center md:bg-bottom py-20 md:py-32 px-6 sm:px-10 md:px-20 flex flex-col justify-center">
       {/* Top Intro Section */}
-      <div className="max-w-4xl mx-auto text-center md:text-left">
+      <div className="max-w-4xl mx-auto md:text-center text-left ">
         <span className="text-cyan-400 uppercase tracking-wide text-sm md:text-base">
           How I Build Full Stack Web Applications
         </span>
