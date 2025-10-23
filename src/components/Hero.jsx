@@ -73,7 +73,7 @@ function Hero() {
         </svg>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes blob {
           0%,
           100% {

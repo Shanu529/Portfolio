@@ -35,7 +35,7 @@ import React from "react";
 function Form() {
   return (
     <div className="max-w-md mx-auto px-6 py-10 ">
-      <p className="text-center text-lg font-semibold mb-6 ">
+      <p className="text-center text-sm md:text-lg font-semibold mb-6 ">
         I’d love to hear from you. Whether it’s a job opportunity or a project
         idea,{" "}
         <span className="px-2 py-1 rounded-md text-lg font-semibold text-cyan-500 ">
