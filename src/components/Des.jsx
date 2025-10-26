@@ -76,7 +76,7 @@ function Description() {
   });
 
   return (
-    <section className="bg-black text-white bg-cover bg-eight bg-center md:bg-bottom py-20 md:py-32 px-6 sm:px-10 md:px-20 flex flex-col justify-center">
+    <section className="bg-black overflow-x-hidden text-white bg-cover bg-eight bg-center md:bg-bottom py-20 md:py-32 px-6 sm:px-10 md:px-20 flex flex-col justify-center">
       {/* Header */}
       <div ref={boxAnimetion} className="max-w-4xl mx-auto md:text-center text-left">
         <span className="text-cyan-400 uppercase tracking-wide text-sm md:text-base">
