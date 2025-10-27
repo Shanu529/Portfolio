@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
@@ -12,16 +10,22 @@ const projects = [
     id: 1,
     title: "Portfolio Website",
     tech: "React + Tailwind CSS",
-    image: "/img/project portfolio.png",///
+    image: "/img/project portfolio.png", ///
   },
   {
     id: 2,
-    title: "AI Image Generator",
-    tech: "MERN + ClipDrop API",
-    image: "/img/Your paragraph text (2).png",////
+    title: "Short Video Platform",
+    tech: "MERN + JWT",
+    image: "/img/shortVideo2.png", ////
   },
   {
     id: 3,
+    title: "AI Image Generator",
+    tech: "MERN + ClipDrop API",
+    image: "/img/Your paragraph text (2).png", ////
+  },
+  {
+    id: 4,
     title: "Spotify Clone",
     tech: "React (Frontend Only)",
     image: "/img/spotifycover.png",
