@@ -24,7 +24,7 @@ function AboutMe() {
       duration: 5,
       scrollTrigger: {
         trigger: boxAnimetion.current,
-        start: "top 60%",
+        start: "top 90%",
         end: "top 10%",
         scrub: true,
       },
@@ -103,14 +103,14 @@ TypeScript
           </div>
         </div>
 
-        <div className="pt-4">
+        {/* <div className="pt-4">
           <a
             href="/img/resumeShanu.pdf"
             className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-medium px-6 py-2 rounded-md shadow-md transition transform hover:scale-105"
           >
             Download Resume
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
