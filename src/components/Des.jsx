@@ -99,12 +99,13 @@ function Description() {
             Frontend Development
           </h2>
           <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-            I use <span className="text-cyan-400">React.js</span>,{" "}
-            <span className="text-cyan-400">Tailwind CSS</span>, and{" "}
-            <span className="text-cyan-400">JavaScript</span> to create fast,
-            modern, and responsive web applications with reusable components and
-            smooth animations.
-          </p>
+  I build modern, responsive interfaces using{" "}
+  <span className="text-cyan-400">React.js</span>,{" "}
+  <span className="text-cyan-400">TypeScript</span>, and{" "}
+  <span className="text-cyan-400">Tailwind CSS</span>, creating reusable
+  components with clean architecture and smooth animations using{" "}
+  <span className="text-cyan-400">GSAP</span>.
+</p>
         </div>
 
         <div
@@ -115,13 +116,18 @@ function Description() {
             Backend Development
           </h2>
           <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-            I build robust APIs with{" "}
-            <span className="text-cyan-400">Node.js</span> and{" "}
-            <span className="text-cyan-400">Express</span>, handling secure
-            authentication using <span className="text-cyan-400">JWT</span> and{" "}
-            <span className="text-cyan-400">bcrypt</span>. My backend focuses on
-            scalability, performance, and clean architecture.
-          </p>
+  I build scalable backend systems using{" "}
+  <span className="text-cyan-400">Node.js</span> and{" "}
+  <span className="text-cyan-400">Express</span>, implementing secure auth with{" "}
+  <span className="text-cyan-400">JWT</span> and{" "}
+  <span className="text-cyan-400">bcrypt</span>. I work with{" "}
+  <span className="text-cyan-400">PostgreSQL</span>,{" "}
+  <span className="text-cyan-400">MongoDB</span>, and{" "}
+  <span className="text-cyan-400">Prisma</span>, containerize apps using{" "}
+  <span className="text-cyan-400">Docker</span>, and integrate AI features with{" "}
+  <span className="text-cyan-400">LangChain</span> and{" "}
+  <span className="text-cyan-400">Groq API</span>.
+</p>
         </div>
 
         <div
@@ -132,14 +138,18 @@ function Description() {
             Database & Deployment
           </h2>
           <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-            I manage data with <span className="text-cyan-400">MongoDB</span> and{" "}
-            <span className="text-cyan-400">Mongoose</span>. I deploy
-            projects on <span className="text-cyan-400">Vercel</span>,{" "}
-            <span className="text-cyan-400">Netlify</span>, and{" "}
-            <span className="text-cyan-400">Render</span>, integrating with{" "}
-            <span className="text-cyan-400">MongoDB Atlas</span> for cloud-hosted
-            databases to ensure uptime and security.
-          </p>
+  I manage data using <span className="text-cyan-400">MongoDB</span>,{" "}
+  <span className="text-cyan-400">PostgreSQL</span>, and{" "}
+  <span className="text-cyan-400">MySQL</span>, leveraging{" "}
+  <span className="text-cyan-400">Prisma</span> and{" "}
+  <span className="text-cyan-400">Mongoose</span> for efficient database
+  modeling and queries. I deploy client and personal projects on{" "}
+  <span className="text-cyan-400">Vercel</span>,{" "}
+  <span className="text-cyan-400">Netlify</span>, and{" "}
+  <span className="text-cyan-400">Render</span>, integrating with{" "}
+  <span className="text-cyan-400">MongoDB Atlas</span> and managed SQL
+  services to ensure scalability, uptime, and production-level security.
+</p>
         </div>
       </div>
     </section>

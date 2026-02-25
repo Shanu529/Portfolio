@@ -1,112 +1,114 @@
 import React, { useState } from "react";
-
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
-import ProjectDetails from "@/pages/ProjectDetails";
 
 const projects = [
   {
     id: 1,
-    title: "Portfolio Website",
-    tech: "React + Tailwind CSS",
-    image: "/img/project portfolio.png", ///
+    title: "AI Chatbot Platform",
+    tech: "React • TypeScript • Node • Redis • Groq API",
+    image: "/img/chatbot.png",
+    repo: "https://github.com/Shanu529/GenBot-LLM-Application",
   },
   {
     id: 2,
-    title: "Short Video Platform",
-    tech: "MERN + JWT",
-    image: "/img/shortVideo2.png", ////
+    title: "Prompt-to-Image AI",
+    tech: "MERN • JWT • Payment Integration",
+    image: "/img/aiimage.png",
+    repo: "https://github.com/Shanu529/NextGen-.AI",
   },
   {
     id: 3,
-    title: "AI Image Generator",
-    tech: "MERN + ClipDrop API",
-    image: "/img/Your paragraph text (2).png", ////
+    title: "Short Video Platform",
+    tech: "MERN • Authentication • Media Upload",
+    image: "/img/shortVideo2.png",
+    repo: "https://github.com/Shanu529/video-Platform",
   },
   {
     id: 4,
-    title: "Spotify Clone",
-    tech: "React (Frontend Only)",
-    image: "/img/spotifycover.png",
+    title: "Portfolio Website",
+    tech: "React • GSAP • Tailwind",
+    image: "/img/project portfolio.png",
+    repo: "https://github.com/Shanu529",
   },
 ];
 
 function Project() {
   const [active, setActive] = useState(1);
-
   const navigate = useNavigate();
+  const activeProject = projects.find((p) => p.id === active);
+
   return (
-    <div className="bg-black text-white p-10   flex flex-col md:flex-row items-start justify-center gap-10 py-14 md:px-32 ">
-      {/* Left Tabs */}
+    <div className="bg-gradient-to-b from-black to-gray-900 text-white py-14 px-5 md:px-20">
+      
+      <div className="flex flex-col md:flex-row gap-10 md:gap-16 max-w-7xl mx-auto">
 
-      <div className="flex flex-col gap-4 w-full md:w-1/3">
-        <h2 className="text-lg md:text-2xl font-bold mb-6">
-          My Work{" "}
-          <span className="bg-white text-black px-2 py-1 rounded-md">
-            Experience
-          </span>
-        </h2>
-        {projects.map((project) => (
-          <button
-            key={project.id}
-            onClick={() => setActive(project.id)}
-            className={`p-4 rounded-xl text-left transition-all duration-300 ${
-              active === project.id
-                ? "bg-white text-black font-semibold"
-                : "bg-cyan-900  hover:bg-cyan-400 "
-            }`}
-          >
-            <p className="text-lg">{project.title}</p>
-            <span className="text-sm opacity-80">{project.tech}</span>
-          </button>
-        ))}
-      </div>
+        {/* Left Side */}
+        <div className="w-full md:w-1/3 flex md:flex-col gap-4 md:gap-5 overflow-x-auto md:overflow-visible pb-2 md:pb-0">
+          
+          <h2 className="hidden md:block text-3xl font-bold mb-4">
+            My Work{" "}
+            <span className="bg-cyan-500 text-black px-3 py-1 rounded-md">
+              Experience
+            </span>
+          </h2>
 
-      {/* Right Preview */}
-      <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-        <img
-          src={projects.find((p) => p.id === active).image}
-          alt={projects.find((p) => p.id === active).title}
-          className="rounded-2xl shadow-lg w-full h-auto object-cover col-span-2 items-center flex"
-        />
+          {projects.map((project) => (
+            <button
+              key={project.id}
+              onClick={() => setActive(project.id)}
+              className={`min-w-[220px] md:min-w-0 p-4 md:p-5 rounded-2xl text-left transition-all duration-300 border ${
+                active === project.id
+                  ? "bg-white text-black border-white shadow-lg"
+                  : "bg-white/5 border-white/10 hover:bg-cyan-500/20 hover:border-cyan-400"
+              }`}
+            >
+              <p className="text-sm md:text-lg font-semibold">
+                {project.title}
+              </p>
+              <span className="text-xs md:text-sm opacity-70">
+                {project.tech}
+              </span>
+            </button>
+          ))}
+        </div>
 
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-5 mt-5">
-          <button
-            onClick={() => navigate("/ProjectDetails")}
-            className="px-4 py-2 bg-cyan-700 text-white rounded hover:bg-cyan-400 transition-all hover:scale-105 duration-700 w-full sm:w-auto text-center"
-          >
-            See Project Details
-          </button>
+        {/* Right Side */}
+        <div className="flex-1 flex flex-col items-center">
 
-          <div className="flex justify-center gap-2 sm:gap-5 items-center">
-            <h2 className="text-center text-sm sm:text-base">
-              <a
-                href="https://github.com/Shanu529"
-                className="hover:text-cyan-400 transition"
-                aria-label="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                See Repository
-              </a>
-            </h2>
+          {/* Mobile Heading */}
+          <h2 className="md:hidden text-2xl font-bold mb-6 text-center">
+            My Work{" "}
+            <span className="bg-cyan-500 text-black px-2 py-1 rounded-md">
+              Experience
+            </span>
+          </h2>
+
+          <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-white/10 w-full">
+            <img
+              src={activeProject.image}
+              alt={activeProject.title}
+              className="w-full h-[220px] sm:h-[300px] md:h-[420px] object-cover"
+            />
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full sm:w-auto">
+            <button
+              onClick={() => navigate("/ProjectDetails")}
+              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-medium hover:opacity-90 transition w-full sm:w-auto"
+            >
+              View Details
+            </button>
+
             <a
-              href="https://github.com/Shanu529"
-              className="hover:text-cyan-400 transition"
-              aria-label="GitHub"
+              href={activeProject.repo}
               target="_blank"
               rel="noopener noreferrer"
+              className="px-6 py-3 bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 transition text-center w-full sm:w-auto"
             >
-              <svg
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                className="w-10 h-10 transition-all hover:scale-125 duration-700"
-              >
-                <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.085 1.838 1.236 1.838 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.604-2.665-.304-5.466-1.333-5.466-5.932 0-1.31.468-2.381 1.235-3.221-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.51 11.51 0 016 0c2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.804 5.625-5.475 5.921.43.372.823 1.103.823 2.222v3.293c0 .319.218.694.825.576C20.565 21.796 24 17.302 24 12c0-6.627-5.373-12-12-12z" />
-              </svg>
+              GitHub Repository
             </a>
           </div>
+
         </div>
       </div>
     </div>

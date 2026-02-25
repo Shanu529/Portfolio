@@ -1,69 +1,75 @@
-import React from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
-import { useRef } from "react";
 
 function HowBuild() {
-  const boxAnimetion = useRef(null);
-  const hiddenHeading = useRef(null);
-  const card2 = useRef(null);
-  const card3 = useRef(null);
+  const boxAnimation = useRef(null);
+  const headingRef = useRef(null);
 
-  //Helper: dynamic offset based on screen width
   const isMobile = window.innerWidth < 768;
-  const yOffset = isMobile ? 80 : 150;
-  const xOffset = isMobile ? 80 : 200;
+  const yOffset = isMobile ? 60 : 120;
 
-  // Top text animation
   useGSAP(() => {
-    gsap.from(boxAnimetion.current, {
+    gsap.from(headingRef.current, {
+      y: -40,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: headingRef.current,
+        start: "top 85%",
+      },
+    });
+
+    gsap.from(boxAnimation.current, {
       y: yOffset,
       opacity: 0,
-      duration: 5,
+      duration: 1.2,
+      ease: "power3.out",
       scrollTrigger: {
-        trigger: boxAnimetion.current,
-        start: "top 90%",
-        end: "top 30%",
-        scrub: true,
+        trigger: boxAnimation.current,
+        start: "top 85%",
       },
     });
-  });
-
-  useGSAP(() => {
-    gsap.from(hiddenHeading.current, {
-      
-      opacity: 0,
-      duration: 5,
-      scrollTrigger: {
-        trigger: hiddenHeading.current,
-        start: "top 80%",
-        end: "top 30%",
-        scrub: true,
-      },
-    });
-  });
+  }, []);
 
   return (
-    <section className="relative h-[50vh] md:h-[60vh] rounded-lg overflow-hidden shadow-lg group">
+    <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed "
+        className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/img/developer.jpeg')" }}
-      ></div>
+      />
 
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90" />
 
-      <div  className="relative z-10 flex flex-col justify-center items-start md:items-center  h-full text-center px-6 md:px-16">
-        <h2 ref={hiddenHeading} className="text-3xl md:text-4xl font-extrabold text-white  mb-4">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <h2
+          ref={headingRef}
+          className="text-3xl md:text-5xl font-bold text-white mb-6"
+        >
           Projects I Build
         </h2>
-        <p ref={boxAnimetion} className="max-w-3xl text-white text-start md:text-center text-base md:text-lg leading-relaxed">
-          I build full stack web applications using the MERN stack (MongoDB,
-          Express.js, React.js, Node.js) and Tailwind CSS for styling. I focus
-          on creating responsive, user-friendly interfaces and robust backend
-          systems to deliver seamless user experiences.
-        </p>
+
+        <div
+          ref={boxAnimation}
+          className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6 md:p-10 shadow-2xl"
+        >
+<p className="text-gray-200 text-base md:text-lg leading-relaxed">
+  I have built multiple full-stack projects, including a payment-based
+  prompt-to-image AI platform with secure credit handling and authentication.
+  I developed an AI-powered chatbot integrating the Groq API with optimized
+  backend performance. I also created GitMe, a GitHub-inspired developer
+  platform focused on clean architecture and scalability. Alongside personal
+  builds, I’ve worked on client and collaborative group projects, earning a
+  Top 20 position in a national-level hackathon.
+</p>
+        </div>
       </div>
     </section>
   );

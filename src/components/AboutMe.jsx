@@ -80,13 +80,19 @@ function AboutMe() {
           <div className="flex flex-col gap-1 bg-gray-50 p-4 rounded-lg shadow hover:scale-105 duration-700 transition-transform">
             <h3 className="text-lg font-semibold text-gray-900">Front End</h3>
             <p className="text-gray-600 text-sm">
-              HTML, CSS, JavaScript, React, Tailwind CSS, GSAP
+              HTML
+CSS
+JavaScript
+React
+Tailwind CSS
+GSAP
+TypeScript
             </p>
           </div>
 
           <div className="flex flex-col gap-1 bg-gray-50 p-4 rounded-lg shadow hover:scale-105 duration-700  transition-transform">
             <h3 className="text-lg font-semibold text-gray-900">Back End</h3>
-            <p className="text-gray-600 text-sm">Node.js, Express, MongoDB</p>
+            <p className="text-gray-600 text-sm">Node.js  Express  MongoDB  PostgreSQL  Prisma</p>
           </div>
 
           <div className="flex flex-col gap-1 bg-gray-50 p-4 rounded-lg shadow hover:scale-105 duration-700  transition-transform">
