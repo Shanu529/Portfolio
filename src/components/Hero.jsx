@@ -1,120 +1,163 @@
-
-
-import React from "react";
-import { Link, Mail } from "lucide-react";
+import React, { useLayoutEffect, useRef } from "react";
+import { Github, Mail } from "lucide-react";
+import gsap from "gsap";
 
 function Hero() {
+  const container = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".hero-text > *", {
+        opacity: 0,
+        y: 25,
+        filter: "blur(6px)",
+        duration: 1,
+        stagger: 0.12,
+        ease: "power2.out"
+      });
+
+      gsap.from(".hero-img", {
+        opacity: 0,
+        scale: 0.96,
+        duration: 1.2,
+        ease: "power2.out"
+      });
+    }, container);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="relative h-screen w-full bg-black text-white overflow-hidden">
-      {/* Subtle layered dark gradients for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black -z-20"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-black via-transparent to-black opacity-30 -z-10"></div>
+    <section
+      ref={container}
+      className="min-h-screen bg-black text-white flex items-center"
+    >
+      <div className="max-w-6xl mx-auto px-6 md:px-10 w-full">
 
-      {/* Neon glowing accent blobs (cyan/blue subtle) */}
-      <div className="absolute inset-0 pointer-events-none">
-        <span className="absolute w-48 sm:w-64 h-48 sm:h-64 bg-cyan-600 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-1200 top-20 left-10 sm:top-28 sm:left-20"></span>
-        <span className="absolute w-48 sm:w-64 h-48 sm:h-64 bg-cyan-400 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-3200 top-32 right-10 sm:top-40 sm:right-20"></span>
-      </div>
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-14 items-center">
 
-      {/* Content */}
-      <div className="relative  z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 md:px-0 max-w-4xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-5 animate-fadeInUp delay-100 bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
-          Hy, I'm Shanu Chhetri
-        </h1>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-gray-300 mb-8 animate-fadeInUp delay-300">
-          Developer & Problem Solver
-        </h2>
-        <p className="text-sm sm:text-base md:text-lg text-gray-400 font-light mb-12 animate-fadeInUp delay-500 max-w-3xl px-2 sm:px-0">
-          I build dynamic and responsive websites, bringing ideas to life using
-          modern web technologies across the frontend, backend, and database —
-          including React, Node.js, and Tailwind CSS.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fadeInUp delay-700">
-          <a
-            href="https://github.com/Shanu529"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 rounded-full bg-cyan-600 text-black font-semibold shadow-lg
-             transform transition hover:bg-cyan-500 hover:scale-105 hover:rotate-2 
-             focus:outline-none inline-block"
-          >
-            View My Work
-          </a>
+          <div className="flex justify-center mb-32 md:mb-5 md:justify-start">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-cyan-500/10 blur-2xl rounded-3xl -z-10"></div>
 
-          <div className="flex justify-center">
-            <a
-              href="mailto:shanu.chhetri529@gmail.com?subject=Portfolio%20Contact&body=Hi,%20I%20would%20like%20to%20connect%20with%20you."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-7 py-3 border border-cyan-500 text-cyan-500 rounded-full shadow-lg transition hover:bg-cyan-500 hover:text-black"
-            >
-              <Mail className="w-5 h-5" />
-              <span className="font-semibold">Send Email</span>
-            </a>
+              <img
+                src="/img/profile.jpg"
+                alt="Shanu Chhetri"
+                className="
+                  hero-img
+                  w-[280px]
+                  sm:w-[340px]
+                  md:w-[420px]
+                  lg:w-[360px]
+                  aspect-[4/5]
+                  object-cover
+                  rounded-3xl
+                  shadow-2xl
+                  border border-white/10
+                  transition-transform duration-500
+                  hover:scale-110
+                "
+              />
+            </div>
           </div>
+          <div className="hero-text md:mt-0 mt-24 space-y-6">
+
+            <h1 className="text-2xl sm:text-4xl md:text-4xl font-semibold leading-tight">
+              Hi, I’m{" "}
+              <span className="text-cyan-500">
+                Shanu Chhetri
+              </span>
+            </h1>
+
+            <h2 className="text-md sm:text-xl md:text-1xl text-gray-400 font-medium">
+              Full-Stack Developer • GenAI Integrator • System Design Learner
+            </h2>
+
+            <p className="text-gray-400 max-w-lg mx-auto md:mx-0 text-sm md:text-sm leading-relaxed">
+              I build scalable full-stack applications using modern technologies
+              like React, TypeScript, PostgreSQL, and Prisma. I integrate GenAI
+              tools such as Groq API, deploy using Docker and CI/CD pipelines,
+              and focus on clean architecture and performance optimization.
+            </p>
+
+            <div className="flex flex-wrap  md:justify-start gap-3">
+              {[
+                "React",
+                "TypeScript",
+                "Node.js",
+                "PostgreSQL",
+                "Prisma",
+                "Redis",
+                "MongoDB",
+                "Docker",
+                "GenAI",
+                "DevOps",
+                "System Design"
+                
+              ].map((tech, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-1 hover:bg-cyan-500 hover:text-black bg-white/5 border border-white/10 text-sm rounded-full text-gray-300"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+
+              <a
+                href="/ProjectDetails"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex items-center justify-center gap-2
+                  px-6 py-3 rounded-lg
+                  bg-white text-black font-medium
+                  hover:scale-105 hover:bg-gray-200
+                  transition-all duration-300
+                "
+              >
+                <Github size={18} />
+                View Projects
+              </a>
+
+              <a
+                href="mailto:shanu.chhetri529@gmail.com"
+                className="
+                  flex items-center justify-center gap-2
+                  px-6 py-3 rounded-lg
+                  border border-gray-600 text-gray-300
+                  hover:border-white hover:text-white
+                  hover:scale-105
+                  transition-all duration-300
+                "
+              >
+                <Mail size={18} />
+                Contact Me
+              </a>
+
+              <a
+              href="#experience"
+              className="
+                  flex items-center justify-center gap-2
+                  px-6 py-3 rounded-lg
+                  border border-gray-600 text-gray-300
+                  hover:border-white hover:text-white
+                  hover:scale-105
+                  transition-all duration-300
+                "
+              >
+            
+                Experiences
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
       </div>
-
-      {/* Scroll arrow */}
-      <div className="absolute bottom-10 sm:bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer z-20">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8 sm:h-10 sm:w-10 text-cyan-400"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </div>
-
-      <style>{`
-        @keyframes blob {
-          0%,
-          100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -40px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-        .animate-blob {
-          animation: blob 9s infinite ease-in-out;
-        }
-        @keyframes fadeInUp {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeInUp {
-          animation: fadeInUp 1s ease forwards;
-        }
-        .delay-100 {
-          animation-delay: 0.1s;
-        }
-        .delay-300 {
-          animation-delay: 0.3s;
-        }
-        .delay-500 {
-          animation-delay: 0.5s;
-        }
-        .delay-700 {
-          animation-delay: 0.7s;
-        }
-      `}</style>
     </section>
   );
 }

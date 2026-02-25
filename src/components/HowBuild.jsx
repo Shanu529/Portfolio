@@ -38,16 +38,14 @@ function HowBuild() {
 
   return (
     <section className="relative py-20 md:py-28 overflow-hidden">
-      {/* Background */}
+     
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/img/developer.jpeg')" }}
       />
 
-      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90" />
 
-      {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <h2
           ref={headingRef}

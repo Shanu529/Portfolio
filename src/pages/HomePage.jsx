@@ -10,6 +10,7 @@ import AboutMe from "../components/AboutMe.jsx";
 import Stack from "../components/Stack.jsx"; // ✅ added
 import Form from "../components/Form.jsx";
 import Footer from "../components/Footer";
+import Experience from "@/components/Experience";
 function HomePage() {
   return (
     <>
@@ -20,6 +21,7 @@ function HomePage() {
       <AboutMe />
       <Des />
       <HowBuild />
+      <Experience />
       <Project />
       <Stack />
       <Form />
