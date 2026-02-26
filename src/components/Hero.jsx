@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { Github, Mail } from "lucide-react";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 function Hero() {
   const container = useRef(null);
@@ -106,8 +107,9 @@ function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
 
-              <a
-                href="/ProjectDetails"
+              <Link to="/ProjectDetails"
+                // href="/ProjectDetails"
+
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -120,7 +122,7 @@ function Hero() {
               >
                 <Github size={18} />
                 View Projects
-              </a>
+              </Link>
 
               <a
                 href="mailto:shanu.chhetri529@gmail.com"

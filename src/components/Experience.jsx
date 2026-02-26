@@ -3,7 +3,7 @@ import React from "react";
 const experiences = [
   {
     title: "Full-Stack Developer Intern – IT Company, Ludhiana",
-    period: "2025",
+    period: "2026",
     description: [
       "Selected as Full-Stack Developer Intern.",
       "Built frontend using React and backend APIs using Node.js & Express.",
@@ -12,7 +12,7 @@ const experiences = [
   },
   {
     title: "Full-Stack Developer (Client Project)",
-    period: "2025",
+    period: "2026",
     description: [
       "Developed full-stack application with blog section & admin panel.",
       "Designed secure REST APIs with authentication & database integration.",

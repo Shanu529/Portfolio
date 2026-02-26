@@ -1,30 +1,38 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const projects = [
   {
     id: 1,
-    title: "AI Chatbot Platform",
-    tech: "React • TypeScript • Node • Redis • Groq API",
-    image: "/img/chatbot.jpeg",
-    repo: "https://github.com/Shanu529/GenBot-LLM-Application",
+    title: "GitMe – Custom Git-Like Version Control System",
+    tech: "Node.js CLI • Yargs • Express • MongoDB • JWT • Redis",
+    image: "/img/gitme.png", // add your GitMe image here
+    repo: "https://github.com/Shanu529/gitme", // update if needed
   },
   {
     id: 2,
+    title: "AI Chatbot Platform",
+    tech: "React • TypeScript • Node • Redis • Groq API",
+    image: "/img/chatbotnew.jpeg",
+    repo: "https://github.com/Shanu529/GenBot-LLM-Application",
+  },
+  {
+    id: 3,
     title: "Prompt-to-Image AI",
     tech: "MERN • JWT • Payment Integration",
     image: "/img/nextgen.png",
     repo: "https://github.com/Shanu529/NextGen-.AI",
   },
   {
-    id: 3,
+    id: 4,
     title: "Short Video Platform",
     tech: "MERN • Authentication • Media Upload",
     image: "/img/shortVideo2.png",
     repo: "https://github.com/Shanu529/video-Platform",
   },
   {
-    id: 4,
+    id: 5,
     title: "Portfolio Website",
     tech: "React • GSAP • Tailwind",
     image: "/img/project portfolio.png",
