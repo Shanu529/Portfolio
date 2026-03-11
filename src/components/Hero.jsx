@@ -109,8 +109,6 @@ function Hero() {
 
               <Link to="/ProjectDetails"
                 // href="/ProjectDetails"
-
-                target="_blank"
                 rel="noopener noreferrer"
                 className="
                   flex items-center justify-center gap-2

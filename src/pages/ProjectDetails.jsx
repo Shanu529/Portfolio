@@ -65,7 +65,6 @@ function ProjectDetails() {
         </div>
       ),
     },
-
    {
   id: 1,
   title: "AI Chatbot Platform (LLM Integrated)",
