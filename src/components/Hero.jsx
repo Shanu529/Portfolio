@@ -83,16 +83,21 @@ function Hero() {
 
             <div className="flex flex-wrap  md:justify-start gap-3">
               {[
+                "Generative AI",
+                "LLM integration",
                 "React",
                 "TypeScript",
                 "Node.js",
                 "PostgreSQL",
                 "Prisma",
                 "Redis",
+                "BullMQ",
                 "MongoDB",
                 "Docker",
-                "GenAI",
+                "Kafka",
                 "DevOps",
+                "JAVA",
+                "DSA",
                 "System Design"
                 
               ].map((tech, index) => (

@@ -44,10 +44,12 @@ function Project() {
   const [active, setActive] = useState(1);
   const navigate = useNavigate();
   const activeProject = projects.find((p) => p.id === active);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibility =  showAll ? projects : projects.slice(0, 4);
 
   return (
     <div className=" bg-black
-    
     text-white py-14 px-5 md:px-20">
       <div className="flex flex-col md:flex-row gap-10 md:gap-16 max-w-7xl mx-auto">
 
@@ -60,7 +62,7 @@ function Project() {
             </span>
           </h2>
 
-          {projects.map((project) => (
+          {visibility.map((project) => (
             <button
               key={project.id}
               onClick={() => setActive(project.id)}
@@ -78,6 +80,18 @@ function Project() {
               </span>
             </button>
           ))}
+          {
+            projects.length>4 && (
+              <button
+              onClick={()=>setShowAll(!showAll)}
+              className="md:mt-4 md:px-4 py-2 border mt-2 px-2
+              hover:bg-cyan-500/20 hover:border-cyan-400
+              border-white/15 rounded-lg"
+              >
+                {showAll ? "Show less" : "See more"}
+              </button>
+            )
+          }
         </div>
 
         <div className="flex-1 flex flex-col items-center">
