@@ -1,9 +1,144 @@
 import React from "react";
 
 function ProjectDetails() {
+
+
+
   const projects = [
+{
+  id: 0,
+  title: "ParaDox AI – Microservices-Based AI Workspace",
+  video: "/videos/paradox.mp4",
+  repo: "https://github.com/Shanu529/pdf-rag-system.git",
+  live: "#",
+  content: (
+    <div className="space-y-6 text-gray-300 text-left">
+
+      <h3 className="text-lg font-semibold text-white">🔹 What I Built</h3>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          Built an <span className="text-cyan-400">AI-powered document workspace</span> where users can upload PDFs, organize them into folders, generate summaries, and chat with their documents.
+        </li>
+        <li>
+          Designed the project using a <span className="text-cyan-400">microservices architecture</span> with independent services for authentication, documents, folders, chat, AI processing, and notifications.
+        </li>
+        <li>
+          Implemented a complete <span className="text-cyan-400">Retrieval-Augmented Generation (RAG)</span> pipeline using vector embeddings and semantic search.
+        </li>
+      </ul>
+
+      <h3 className="text-lg font-semibold text-white">🔹 How I Implemented It</h3>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          Created an <span className="text-cyan-400">API Gateway</span> to route requests between multiple backend services.
+        </li>
+        <li>
+          Processed PDFs asynchronously using <span className="text-cyan-400">Redis + BullMQ workers</span> for text extraction, chunking, embedding generation, and indexing.
+        </li>
+        <li>
+          Stored vector embeddings in <span className="text-cyan-400">ChromaDB</span> and used semantic retrieval with reranking before generating answers.
+        </li>
+        <li>
+          Integrated <span className="text-cyan-400">FastAPI, Sentence Transformers, and Groq Llama 3.3 70B</span> to generate summaries and context-aware responses.
+        </li>
+        <li>
+          Implemented <span className="text-cyan-400">Kafka + Socket.IO</span> for real-time document processing notifications.
+        </li>
+      </ul>
+
+      <h3 className="text-lg font-semibold text-white">🔹 Security & Performance</h3>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          Secured APIs using <span className="text-cyan-400">JWT Access & Refresh Tokens</span>.
+        </li>
+        <li>
+          Used <span className="text-cyan-400">PostgreSQL + Prisma ORM</span> for reliable relational data management.
+        </li>
+        <li>
+          Improved scalability through <span className="text-cyan-400">microservices, asynchronous processing, Docker, and event-driven communication</span>.
+        </li>
+      </ul>
+
+      <h3 className="text-lg font-semibold text-white">🔹 Why I Built It</h3>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          To learn <span className="text-cyan-400">AI, RAG, vector databases, and LLM integration</span> while building a production-style application.
+        </li>
+        <li>
+          To gain practical experience with <span className="text-cyan-400">microservices, distributed systems, Docker, Kafka, Redis, and scalable backend architecture</span>.
+        </li>
+      </ul>
+
+    </div>
+  ),
+},
+
+{
+  id: 1,
+  title: "ShadowChat – Anonymous Real-Time Chat Platform",
+  video: "/videos/shadowchat.mp4",
+  repo: "https://github.com/Shanu529/Shadow-Chat.git",
+  live: "https://www.shadowchat.in",
+  content: (
+    <div className="space-y-6 text-gray-300 text-left">
+
+      <h3 className="text-lg font-semibold text-white">🔹 What I Built</h3>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          Developed an <span className="text-cyan-400">anonymous real-time chat platform</span> enabling users to connect instantly without revealing personal identities.
+        </li>
+        <li>
+          Implemented <span className="text-cyan-400">private one-to-one messaging</span> with a modern responsive interface.
+        </li>
+        <li>
+          Built a scalable backend capable of handling multiple concurrent users and live communication.
+        </li>
+      </ul>
+
+      <h3 className="text-lg font-semibold text-white">🔹 How I Implemented It</h3>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          Built the frontend using <span className="text-cyan-400">Next.js, React, and TypeScript</span>.
+        </li>
+        <li>
+          Developed REST APIs using <span className="text-cyan-400">Node.js and Express</span>.
+        </li>
+        <li>
+          Integrated <span className="text-cyan-400">Socket.IO</span> for instant bidirectional messaging.
+        </li>
+        <li>
+          Used <span className="text-cyan-400">Redis</span> for fast temporary data management and improved real-time performance.
+        </li>
+      </ul>
+
+      <h3 className="text-lg font-semibold text-white">🔹 Security & Performance</h3>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          Protected user sessions using <span className="text-cyan-400">JWT authentication</span>.
+        </li>
+        <li>
+          Optimized message delivery with <span className="text-cyan-400">Socket.IO event-based communication</span>.
+        </li>
+        <li>
+          Designed a responsive interface providing a smooth experience across desktop and mobile devices.
+        </li>
+      </ul>
+
+      <h3 className="text-lg font-semibold text-white">🔹 Why I Built It</h3>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          To gain hands-on experience building <span className="text-cyan-400">real-time communication systems</span>.
+        </li>
+        <li>
+          To understand <span className="text-cyan-400">WebSockets, Socket.IO, scalable backend architecture, and Redis-based real-time applications</span>.
+        </li>
+      </ul>
+
+    </div>
+  ),
+},
     {
-      id: 0,
+      id: 2,
       title: "GitMe – Custom Git-Like Version Control System",
       video: "/videos/gitme.mp4",
       repo: "https://github.com/Shanu529/gitme",
@@ -65,8 +200,10 @@ function ProjectDetails() {
         </div>
       ),
     },
+
+
    {
-  id: 1,
+  id: 3,
   title: "AI Chatbot Platform (LLM Integrated)",
   video: "/videos/CHATBOT.mp4",
   repo: "https://github.com/Shanu529/GenBot-LLM-Application",
@@ -141,10 +278,10 @@ function ProjectDetails() {
 
     </div>
   ),
-},
+  },
 
    {
-  id: 2,
+  id: 4,
   title: "Prompt-to-Image AI Generator (Payment Integrated)",
   video: "/videos/project3.mp4",
   repo: "https://github.com/Shanu529/NextGen-.AI",
@@ -208,7 +345,7 @@ function ProjectDetails() {
   ),
 },
     {
-      id: 3,
+      id: 5,
       title: "Short Video Platform",
       video: "/videos/project2.mp4",
       repo: "https://github.com/Shanu529/video-Platform",
@@ -229,7 +366,7 @@ function ProjectDetails() {
     },
 
     {
-      id: 4,
+      id: 6,
       title: "Music Streaming Web Application",
       video: "/videos/project1.mp4",
       repo: "https://github.com/Shanu529/Spotify-clone",

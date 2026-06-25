@@ -5,38 +5,51 @@ import { useNavigate } from "react-router-dom";
 const projects = [
   {
     id: 1,
-    title: "GitMe – Custom Git-Like Version Control System",
-    tech: "Node.js CLI • Yargs • Express • MongoDB • JWT • Redis",
-    image: "/img/gitme.png", // add your GitMe image here
-    repo: "https://github.com/Shanu529/gitme", // update if needed
+    title: "ParaDox AI – Microservices RAG PDF Platform",
+    tech: "React • TypeScript • Node.js • Express • python • FastAPI • PostgreSQL • Prisma • Redis • BullMQ • Kafka • Docker • ChromaDB • ",
+    image: "/img/paradox.png",
+    repo: "https://github.com/Shanu529/pdf-rag-system.git", // update if different
   },
+
   {
     id: 2,
-    title: "AI Chatbot Platform",
-    tech: "React • TypeScript • Node • Redis • Groq API",
+    title: "ShadowChat – Anonymous Real-Time Chat Platform",
+    tech: "Next.js • Node.js • Typescript • Express • Socket.IO • Redis • JWT • Responsive UI",
+    image: "/img/shadowchat.png",
+    repo: "https://github.com/Shanu529/Shadow-Chat.git", // update if different
+    live: "https://www.shadowchat.in",
+  },
+
+  {
+    id: 3,
+    title: "GitMe – Custom Git-like Version Control System",
+    tech: "Node.js • Express • MongoDB • JWT • Redis • Yargs CLI",
+    image: "/img/gitme.png",
+    repo: "https://github.com/Shanu529/gitme",
+  },
+
+  {
+    id: 4,
+    title: "GenBot – AI Chatbot Platform",
+    tech: "React • TypeScript • Node.js • Express • Redis • Groq API • JWT",
     image: "/img/chatbotnew.jpeg",
     repo: "https://github.com/Shanu529/GenBot-LLM-Application",
   },
+
   {
-    id: 3,
-    title: "Prompt-to-Image AI",
-    tech: "MERN • JWT • Payment Integration",
+    id: 5,
+    title: "NextGen AI – Prompt-to-Image Generator",
+    tech: "React • Node.js • Express • MongoDB • JWT • AI API • Payment Integration",
     image: "/img/nextgen.png",
     repo: "https://github.com/Shanu529/NextGen-.AI",
   },
+
   {
-    id: 4,
-    title: "Short Video Platform",
-    tech: "MERN • Authentication • Media Upload",
+    id: 6,
+    title: "Short Video Sharing Platform",
+    tech: "React • Node.js • Express • MongoDB • JWT • Cloudinary • Media Upload",
     image: "/img/shortVideo2.png",
     repo: "https://github.com/Shanu529/video-Platform",
-  },
-  {
-    id: 5,
-    title: "Portfolio Website",
-    tech: "React • GSAP • Tailwind",
-    image: "/img/project portfolio.png",
-    repo: "https://github.com/Shanu529",
   },
 ];
 
