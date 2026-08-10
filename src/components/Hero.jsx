@@ -32,6 +32,7 @@ const TECH_LIST = [
   { name: "Java", desc: "OOP & DSA", Icon: Coffee },
   { name: "TypeScript", desc: "Type-safety", Icon: FileCode2 },
   { name: "GenAI", desc: "LLM features", Icon: Sparkles },
+  { name: "DSA JAVA", desc: "Data Structures and Algorithms", Icon: Sparkles },
   { name: "GitHub", desc: "CI/CD & Git", Icon: Github },
   { name: "System Design", desc: "Scalability", Icon: Network },
 ];
